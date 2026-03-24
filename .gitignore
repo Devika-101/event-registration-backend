@@ -1,0 +1,4 @@
+node_modules/ 
+events.db 
+*.log 
+.DS_Store 
