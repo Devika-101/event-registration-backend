@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0e0e0e; }
+::-webkit-scrollbar-thumb { background: #353534; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #dc2626; }
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(28, 28, 28, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(220, 38, 38, 0.18);
+}
+
+/* Glass panel (darker) */
+.glass-panel {
+  background: rgba(14, 14, 14, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+/* Input glow on focus */
+.input-glow:focus {
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.3);
+  border-color: #dc2626 !important;
+  outline: none;
+}
+
+/* Button red glow hover */
+.btn-glow:hover {
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.5), 0 4px 24px rgba(220, 38, 38, 0.3);
+}
+
+/* Split background for landing page */
+.split-bg-left {
+  background-color: #0a0a0a;
+}
+.split-bg-right {
+  background-color: #7a0a0a;
+}
+
+/* Scan line animation for cyber feel */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Red shimmer skeleton */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #1c1c1c 25%, #2a0a0a 50%, #1c1c1c 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Fly to cart animation */
+@keyframes flyToCart {
+  0%   { transform: scale(1) translate(0, 0); opacity: 1; }
+  50%  { transform: scale(0.6) translate(150px, -200px); opacity: 0.8; }
+  100% { transform: scale(0) translate(300px, -400px); opacity: 0; }
+}
+
+.fly-to-cart {
+  animation: flyToCart 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Toast override */
+.toast-custom {
+  background: #1c1b1b !important;
+  color: #e5e2e1 !important;
+  border: 1px solid rgba(220, 38, 38, 0.4) !important;
+  font-family: 'Inter', sans-serif !important;
+}
